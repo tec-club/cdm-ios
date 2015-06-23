@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDMSecondViewController">
+            <connections>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="webView" destination="kGy-AV-eXp" id="QUH-kH-znj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-Fr-tnN">
+                    <rect key="frame" x="0.0" y="16" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Twitter" id="U83-Qq-G7L">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="74q-Fa-Zc2">
+                                <connections>
+                                    <action selector="goBack" destination="kGy-AV-eXp" id="JFB-Sx-UZF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Home" id="JQ4-Tv-xPP">
+                                <connections>
+                                    <action selector="goHome:" destination="-1" id="ZQb-GX-ltx"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGy-AV-eXp">
+                    <rect key="frame" x="0.0" y="60" width="320" height="458"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GAc-Fr-tnN" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16" id="5EJ-XD-WLb"/>
+                <constraint firstItem="GAc-Fr-tnN" firstAttribute="leading" secondItem="kGy-AV-eXp" secondAttribute="leading" id="GNZ-97-7qP"/>
+                <constraint firstAttribute="bottom" secondItem="kGy-AV-eXp" secondAttribute="bottom" constant="50" id="Q6t-FN-L5i"/>
+                <constraint firstItem="GAc-Fr-tnN" firstAttribute="trailing" secondItem="kGy-AV-eXp" secondAttribute="trailing" id="nTC-BK-SHd"/>
+                <constraint firstItem="kGy-AV-eXp" firstAttribute="top" secondItem="GAc-Fr-tnN" secondAttribute="bottom" id="qfP-AA-qbN"/>
+                <constraint firstAttribute="trailing" secondItem="kGy-AV-eXp" secondAttribute="trailing" id="whW-zp-ndP"/>
+                <constraint firstItem="kGy-AV-eXp" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ynO-EP-frB"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

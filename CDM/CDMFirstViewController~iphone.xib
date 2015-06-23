@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDMFirstViewController">
+            <connections>
+                <outlet property="backButton" destination="UJZ-HB-Krn" id="byp-au-4h3"/>
+                <outlet property="goBack" destination="9Bn-BZ-E3L" id="ptv-Fe-gHL"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="webView" destination="8Ob-Dy-6jX" id="oJt-k1-vR6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="564"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSa-mt-cWu">
+                    <rect key="frame" x="0.0" y="16" width="359" height="44"/>
+                    <items>
+                        <navigationItem title="Resources" id="ewA-zB-5bM">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="9Bn-BZ-E3L">
+                                <connections>
+                                    <action selector="goBack" destination="8Ob-Dy-6jX" id="Vjz-7K-igw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Settings" id="8WL-l2-5Eb">
+                                <connections>
+                                    <action selector="setButtonPress:" destination="-1" id="qSd-DM-hXg"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trident.png" translatesAutoresizingMaskIntoConstraints="NO" id="zWS-rD-v4M">
+                    <rect key="frame" x="0.0" y="60" width="359" height="106"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="106" id="Sjn-EJ-oxi"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uhn-Oz-3Nj">
+                    <rect key="frame" x="0.0" y="174" width="359" height="340"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Igd-59-Wft"/>
+                        <outlet property="delegate" destination="-1" id="sUA-oh-LEy"/>
+                    </connections>
+                </tableView>
+                <webView hidden="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ob-Dy-6jX">
+                    <rect key="frame" x="0.0" y="60" width="359" height="454"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Itw-yC-baj"/>
+                    </connections>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJZ-HB-Krn">
+                    <rect key="frame" x="11" y="481" width="22" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonTap:" destination="-1" eventType="touchUpInside" id="Dc3-9k-dH5"/>
+                        <action selector="backButtonTap:" destination="-2" eventType="touchUpInside" id="Fxs-Ol-PKk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8Ob-Dy-6jX" firstAttribute="trailing" secondItem="zWS-rD-v4M" secondAttribute="trailing" id="2Ka-AI-XL6"/>
+                <constraint firstItem="uhn-Oz-3Nj" firstAttribute="trailing" secondItem="8Ob-Dy-6jX" secondAttribute="trailing" id="2Zf-f2-Sun"/>
+                <constraint firstAttribute="bottom" secondItem="UJZ-HB-Krn" secondAttribute="bottom" constant="61" id="4Es-0z-PiI"/>
+                <constraint firstItem="zWS-rD-v4M" firstAttribute="leading" secondItem="rSa-mt-cWu" secondAttribute="leading" id="7Tk-Ca-wpy"/>
+                <constraint firstItem="8Ob-Dy-6jX" firstAttribute="leading" secondItem="zWS-rD-v4M" secondAttribute="leading" id="8Ti-Q4-Tl2"/>
+                <constraint firstItem="zWS-rD-v4M" firstAttribute="top" secondItem="8Ob-Dy-6jX" secondAttribute="top" id="Pid-IA-Mxg"/>
+                <constraint firstAttribute="bottom" secondItem="8Ob-Dy-6jX" secondAttribute="bottom" constant="50" id="RpA-wd-Q0j"/>
+                <constraint firstItem="8Ob-Dy-6jX" firstAttribute="bottom" secondItem="uhn-Oz-3Nj" secondAttribute="bottom" id="WaC-cr-SFf"/>
+                <constraint firstItem="UJZ-HB-Krn" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="11" id="XMr-BI-Vh1"/>
+                <constraint firstItem="zWS-rD-v4M" firstAttribute="leading" secondItem="uhn-Oz-3Nj" secondAttribute="leading" id="ctM-Ba-W2R"/>
+                <constraint firstItem="uhn-Oz-3Nj" firstAttribute="top" secondItem="zWS-rD-v4M" secondAttribute="bottom" constant="8" symbolic="YES" id="dN6-Zb-9S7"/>
+                <constraint firstItem="rSa-mt-cWu" firstAttribute="trailing" secondItem="zWS-rD-v4M" secondAttribute="trailing" id="hOf-eW-Ia2"/>
+                <constraint firstItem="rSa-mt-cWu" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16" id="iyy-g2-DGb"/>
+                <constraint firstItem="rSa-mt-cWu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="lCx-R6-HRJ"/>
+                <constraint firstAttribute="trailing" secondItem="rSa-mt-cWu" secondAttribute="trailing" id="mcM-oO-VbN"/>
+                <constraint firstItem="zWS-rD-v4M" firstAttribute="top" secondItem="rSa-mt-cWu" secondAttribute="bottom" id="p1l-IV-RNB"/>
+            </constraints>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="trident.png" width="1602" height="821"/>
+    </resources>
+</document>

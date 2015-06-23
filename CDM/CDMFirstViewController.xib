@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDMFirstViewController">
+            <connections>
+                <outlet property="backButton" destination="X5B-2S-jOY" id="cOF-y6-22L"/>
+                <outlet property="goBack" destination="iaY-mF-AhZ" id="fKY-Qv-3fL"/>
+                <outlet property="setButton" destination="exw-Nd-R0y" id="lHZ-mb-XK7"/>
+                <outlet property="view" destination="1" id="Zuv-1t-Waa"/>
+                <outlet property="webView" destination="lS3-bf-mxB" id="OYn-xV-fXA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZV-xD-VnZ">
+                    <rect key="frame" x="0.0" y="16" width="768" height="44"/>
+                    <items>
+                        <navigationItem title="Resources" id="YKh-tw-sTR">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="iaY-mF-AhZ">
+                                <connections>
+                                    <action selector="goBack" destination="lS3-bf-mxB" id="nSD-s1-Okj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" id="3EV-8L-nLj">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="exw-Nd-R0y">
+                                    <rect key="frame" x="724" y="8" width="28" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" image="gear.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="setButtonPress:" destination="-1" eventType="touchUpInside" id="2E4-47-ERR"/>
+                                        <action selector="setButtonPress:" destination="-2" eventType="touchUpInside" id="5Oc-i8-fYa"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CDM.png" translatesAutoresizingMaskIntoConstraints="NO" id="4y8-ip-STi">
+                    <rect key="frame" x="0.0" y="60" width="768" height="390"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PDi-Lj-5uH">
+                    <rect key="frame" x="0.0" y="447" width="768" height="527"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eAT-QM-GYs"/>
+                        <outlet property="delegate" destination="-1" id="hrI-OL-4OH"/>
+                    </connections>
+                </tableView>
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lS3-bf-mxB">
+                    <rect key="frame" x="0.0" y="60" width="768" height="914"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6tj-MF-roS"/>
+                    </connections>
+                </webView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-2S-jOY">
+                    <rect key="frame" x="20" y="929" width="22" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonTap:" destination="-2" eventType="touchUpInside" id="q0v-hV-5x1"/>
+                        <action selector="backButtonTap:" destination="-1" eventType="touchUpInside" id="uVO-Vg-K3w"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CDM.png" width="1600" height="760"/>
+        <image name="gear.png" width="50" height="50"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="768" height="1024"/>
+            <size key="landscapeSize" width="1024" height="768"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>

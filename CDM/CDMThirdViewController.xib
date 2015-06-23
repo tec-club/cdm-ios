@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDMThirdViewController">
+            <connections>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="webView" destination="xOz-o6-Wco" id="bS3-FQ-sUR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTB-Lz-lxI">
+                    <rect key="frame" x="0.0" y="16" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Instagram" id="vwy-FV-rwv">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="S6v-rJ-Wmb">
+                                <connections>
+                                    <action selector="goBack" destination="xOz-o6-Wco" id="FfA-kH-Q76"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Home" id="tBg-oa-Zlh">
+                                <connections>
+                                    <action selector="goHome:" destination="-1" id="Fg3-b7-IGj"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOz-o6-Wco">
+                    <rect key="frame" x="0.0" y="60" width="320" height="458"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xOz-o6-Wco" firstAttribute="top" secondItem="gTB-Lz-lxI" secondAttribute="bottom" id="0NF-re-cpQ"/>
+                <constraint firstItem="gTB-Lz-lxI" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="26q-3M-L0r"/>
+                <constraint firstAttribute="trailing" secondItem="xOz-o6-Wco" secondAttribute="trailing" id="3m6-HQ-SgK"/>
+                <constraint firstAttribute="bottom" secondItem="xOz-o6-Wco" secondAttribute="bottom" constant="50" id="M7p-ep-H08"/>
+                <constraint firstItem="gTB-Lz-lxI" firstAttribute="trailing" secondItem="xOz-o6-Wco" secondAttribute="trailing" id="RLH-3c-RqJ"/>
+                <constraint firstItem="gTB-Lz-lxI" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16" id="i2v-sb-0pk"/>
+                <constraint firstItem="gTB-Lz-lxI" firstAttribute="leading" secondItem="xOz-o6-Wco" secondAttribute="leading" id="zeB-4u-DQR"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
